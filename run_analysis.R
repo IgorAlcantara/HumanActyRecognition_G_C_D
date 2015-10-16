@@ -148,6 +148,7 @@ df_tidy_db <- dcast(df_melted_db, SubjectID + Activity ~ variable, mean)
 
 # write the tidy data set to a file
 write.csv(df_tidy_db, "tidy_db.csv", row.names=FALSE)
+write.table(df_tidy_db, "tidy_db.txt", row.names=FALSE)
 
 ##################################################################
 
